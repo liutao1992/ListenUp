@@ -130,3 +130,60 @@
 - 日志库：logger
 - 网络请求库：cloud
 - 音频处理库：wx-media-recorder
+
+
+## 项目目录结构
+
+ListenUp/ 
+├── cloudfunctions/
+│   ├── quickstartFunctions/
+│   └── ...
+├── miniprogram/
+│   ├── pages/
+│   │   ├── index/                # 首页(课程列表)
+│   │   ├── index.ts
+│   │   ├── index.wxml
+│   │   ├── index.wxss
+│   │   └── index.json
+│   │
+│   ├── lesson/              # 听力练习页
+│   │   ├── index.ts         # 课程详情页
+│   │   ├── index.wxml
+│   │   ├── index.wxss
+│   │   ├── index.json
+│   │   │
+│   │   └── player/          # 音频播放页面
+│   │       ├── index.ts
+│   │       ├── index.wxml
+│   │       ├── index.wxss
+│   │       └── index.json
+│   │
+│   ├── vocabulary/          # 生词本
+│   │   ├── index.ts
+│   │   ├── index.wxml
+│   │   ├── index.wxss
+│   │   └── index.json
+│   │
+│   └── profile/             # 个人中心
+│       ├── index.ts
+│       ├── index.wxml
+│       ├── index.wxss
+│       └── index.json
+│
+├── components/             # 公共组件
+│   ├── audio-player/       # 音频播放器组件
+│   └── word-card/          # 单词卡片组件
+│
+├── services/               # 业务逻辑层
+│   ├── course.ts           # 课程相关服务
+│   ├── audio.ts            # 音频相关服务
+│   └── vocabulary.ts       # 生词本相关服务
+│
+├── models/                 # 数据模型
+│   ├── course.ts
+│   ├── audio.ts
+│   └── vocabulary.ts
+│
+└── utils/                 # 工具函数
+    ├── cloud.ts           # 云函数调用封装
+    └── player.ts          # 播放器相关工具
